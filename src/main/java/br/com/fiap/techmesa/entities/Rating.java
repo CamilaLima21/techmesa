@@ -1,7 +1,6 @@
-package br.com.fiap.techmesa.entity;
+package br.com.fiap.techmesa.entities;
 
 import java.time.LocalDate;
-import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -13,8 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,28 +25,29 @@ import lombok.Setter;
 @NoArgsConstructor
 
 @Entity
-@Table(name = "CLIENT")
+@Table(name = "RATING")
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
-public class Client {
+public class Rating {
 
 	@Id
-	@Column(unique = true)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
+	private long id;
 	
-	@OneToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
-	@JoinColumn(name = "endereco_id", referencedColumnName = "id")
-	private Address address;
-	
-	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY)
-	List<Reserve> reserve;
+	@ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @JoinColumn(name = "client_id", referencedColumnName = "id")
+	private Client client;
 	
 	@Column
-	private String name;
+	private String title;
 	
-	@Column(unique = true)
-	private String email;
+	@Column
+	private String text;
 	
-	@Column(nullable = false, columnDefinition = "DATE")
-	private LocalDate registrationDate;
+	@Column
+	private int note;
+	
+	@Column
+	private LocalDate dateRegistration;
+	
 }

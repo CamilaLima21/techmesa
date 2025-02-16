@@ -1,4 +1,4 @@
-package br.com.fiap.techmesa.entity;
+package br.com.fiap.techmesa.entities;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -58,7 +58,7 @@ public class Restaurant {
 	List<TableRestaurant> tableRestaurant;
 	
 	@Column
-	private TypekitchenEnum typeKitchenEnum;
+	private TypekitchenEnum typeKitchen;
 	
 	@Column
 	private int capacity;

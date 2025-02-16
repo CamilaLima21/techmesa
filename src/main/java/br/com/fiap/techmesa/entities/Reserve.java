@@ -1,4 +1,4 @@
-package br.com.fiap.techmesa.entity;
+package br.com.fiap.techmesa.entities;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -46,7 +46,7 @@ public class Reserve {
 	private Restaurant restaurant;
 	
 	@OneToMany(mappedBy = "reserve", fetch = FetchType.LAZY)
-	private List<Table> table;
+	private List<TableRestaurant> tableRestaurant;
 	
 	@Column
 	private int numberPeople;

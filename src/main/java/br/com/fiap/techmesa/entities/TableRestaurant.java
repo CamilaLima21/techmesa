@@ -1,4 +1,4 @@
-package br.com.fiap.techmesa.entity;
+package br.com.fiap.techmesa.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
