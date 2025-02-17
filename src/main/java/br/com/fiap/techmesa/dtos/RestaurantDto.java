@@ -8,7 +8,7 @@ import br.com.fiap.techmesa.entities.OpeningHours;
 import br.com.fiap.techmesa.entities.Reserve;
 import br.com.fiap.techmesa.entities.TableRestaurant;
 import br.com.fiap.techmesa.enums.StatusRestaurantEnum;
-import br.com.fiap.techmesa.enums.TypekitchenEnum;
+import br.com.fiap.techmesa.enums.TypeKitchenEnum;
 
 public record RestaurantDto(
 		long id,
@@ -18,7 +18,7 @@ public record RestaurantDto(
 		List<OpeningHours> openingHours,
 		List<Reserve> reserve,
 		List<TableRestaurant> tableRestaurant,
-		TypekitchenEnum typeKitchen,
+		TypeKitchenEnum typeKitchen,
 		int capacity,
 		StatusRestaurantEnum statusRestaurant,
 		LocalDate registrationDate) {}

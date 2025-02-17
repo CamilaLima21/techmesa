@@ -1,6 +1,6 @@
 package br.com.fiap.techmesa.enums;
 
-public enum TypekitchenEnum {
+public enum TypeKitchenEnum {
 
 	JAPANESE("JP"),
 	ITALIAN("IT"),
@@ -16,7 +16,7 @@ public enum TypekitchenEnum {
 	
 	private final String acronym;
 	
-	TypekitchenEnum(String acronym) {
+	TypeKitchenEnum(String acronym) {
 		this.acronym = acronym;
 	}
 	

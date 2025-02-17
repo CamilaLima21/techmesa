@@ -6,7 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import br.com.fiap.techmesa.enums.StatusRestaurantEnum;
-import br.com.fiap.techmesa.enums.TypekitchenEnum;
+import br.com.fiap.techmesa.enums.TypeKitchenEnum;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -58,7 +58,7 @@ public class Restaurant {
 	List<TableRestaurant> tableRestaurant;
 	
 	@Column
-	private TypekitchenEnum typeKitchen;
+	private TypeKitchenEnum typeKitchen;
 	
 	@Column
 	private int capacity;
